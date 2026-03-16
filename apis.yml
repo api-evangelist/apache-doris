@@ -1,0 +1,36 @@
+aid: apache-doris
+name: Apache Doris
+description: >-
+  Apache Doris is a high-performance, real-time analytical database based on MPP architecture. It provides sub-second queries on large-scale data with a MySQL-compatible interface and supports both batch and streaming data ingestion.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Database
+  - Analytics
+  - MPP
+  - Real-Time
+  - OLAP
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-doris:apache-doris
+    name: Apache Doris
+    description: >-
+      Doris provides a MySQL-compatible protocol for SQL queries, a REST API for cluster management, Stream Load API for real-time data ingestion, Routine Load for Kafka integration, and JDBC/ODBC drivers.
+    humanURL: https://doris.apache.org/docs/dev/summary/basic-summary
+    tags:
+      - SQL
+      - REST
+      - Analytics
+      - Data Ingestion
+    properties:
+      - type: Documentation
+        url: https://doris.apache.org/docs/dev/summary/basic-summary
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
