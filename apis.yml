@@ -7,11 +7,11 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Database
   - Analytics
+  - Database
   - MPP
-  - Real-Time
   - OLAP
+  - Real-Time
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -24,10 +24,10 @@ apis:
       Doris provides a MySQL-compatible protocol for SQL queries, a REST API for cluster management, Stream Load API for real-time data ingestion, Routine Load for Kafka integration, and JDBC/ODBC drivers.
     humanURL: https://doris.apache.org/docs/dev/summary/basic-summary
     tags:
-      - SQL
-      - REST
       - Analytics
       - Data Ingestion
+      - REST
+      - SQL
     properties:
       - type: Documentation
         url: https://doris.apache.org/docs/dev/summary/basic-summary
