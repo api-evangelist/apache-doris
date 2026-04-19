@@ -1,0 +1,19 @@
+{
+  "TxnId": 1001,
+  "Label": "load-20250315-001",
+  "Status": "Success",
+  "ExistingJobStatus": "FINISHED",
+  "Message": "OK",
+  "NumberTotalRows": 10000,
+  "NumberLoadedRows": 9998,
+  "NumberFilteredRows": 2,
+  "NumberUnselectedRows": 0,
+  "LoadBytes": 1024000,
+  "LoadTimeMs": 350,
+  "BeginTxnTimeMs": 5,
+  "StreamLoadPutTimeMs": 20,
+  "ReadDataTimeMs": 120,
+  "WriteDataTimeMs": 200,
+  "CommitAndPublishTimeMs": 5,
+  "ErrorURL": "http://doris-fe:8030/api/_load_error_log?file=error_log_abc"
+}

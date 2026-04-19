@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-structure/apache-doris-table-schema-structure.json",
+  "name": "TableSchema",
+  "description": "Schema definition for an Apache Doris table, describing columns, keys, and partitioning.",
+  "type": "object",
+  "properties": {
+    "tableName": {
+      "type": "string",
+      "description": "Name of the table.",
+      "example": "sales_events"
+    },
+    "databaseName": {
+      "type": "string",
+      "description": "Database containing the table.",
+      "example": "analytics"
+    },
+    "tableType": {
+      "type": "string",
+      "description": "Data model of the table.",
+      "enum": [
+        "OLAP",
+        "EXTERNAL",
+        "MYSQL",
+        "BROKER",
+        "HIVE"
+      ],
+      "example": "OLAP"
+    },
+    "keyType": {
+      "type": "string",
+      "description": "Key model for the table.",
+      "enum": [
+        "DUP_KEYS",
+        "AGG_KEYS",
+        "UNIQUE_KEYS"
+      ],
+      "example": "DUP_KEYS"
+    },
+    "columns": {
+      "type": "array",
+      "description": "List of column definitions.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Column name.",
+            "example": "event_time"
+          },
+          "type": {
+            "type": "string",
+            "description": "Doris data type.",
+            "example": "DATETIME"
+          },
+          "isKey": {
+            "type": "boolean",
+            "description": "Whether this column is part of the key.",
+            "example": false
+          },
+          "nullable": {
+            "type": "boolean",
+            "description": "Whether this column allows NULL values.",
+            "example": true
+          },
+          "comment": {
+            "type": "string",
+            "description": "Column comment.",
+            "example": "Timestamp of the event"
+          }
+        }
+      }
+    },
+    "comment": {
+      "type": "string",
+      "description": "Table comment.",
+      "example": "Sales event records table"
+    },
+    "replicationNum": {
+      "type": "int32",
+      "description": "Number of data replicas.",
+      "default": 3,
+      "example": 3
+    }
+  },
+  "required": [
+    "tableName",
+    "databaseName",
+    "keyType"
+  ]
+}

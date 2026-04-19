@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-structure/apache-doris-routine-load-job-structure.json",
+  "name": "RoutineLoadJob",
+  "description": "Configuration and state of a Routine Load job that continuously ingests data from Apache Kafka into Doris.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "description": "Routine Load job ID.",
+      "example": 601
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the Routine Load job.",
+      "example": "kafka-sales-load"
+    },
+    "dbName": {
+      "type": "string",
+      "description": "Target database name.",
+      "example": "analytics"
+    },
+    "tableName": {
+      "type": "string",
+      "description": "Target table name.",
+      "example": "sales_events"
+    },
+    "state": {
+      "type": "string",
+      "description": "Current state of the load job.",
+      "enum": [
+        "NEED_SCHEDULE",
+        "RUNNING",
+        "PAUSED",
+        "STOPPED",
+        "CANCELLED"
+      ],
+      "example": "RUNNING"
+    },
+    "dataSourceType": {
+      "type": "string",
+      "description": "Data source type.",
+      "enum": [
+        "KAFKA"
+      ],
+      "example": "KAFKA"
+    },
+    "kafkaBrokerList": {
+      "type": "string",
+      "description": "Kafka broker list.",
+      "example": "broker1:9092,broker2:9092"
+    },
+    "kafkaTopic": {
+      "type": "string",
+      "description": "Kafka topic to consume from.",
+      "example": "sales-events"
+    },
+    "format": {
+      "type": "string",
+      "description": "Data format.",
+      "enum": [
+        "CSV",
+        "JSON",
+        "AVRO"
+      ],
+      "example": "JSON"
+    },
+    "totalRows": {
+      "type": "int32",
+      "description": "Total number of rows loaded since job start.",
+      "example": 5000000
+    },
+    "loadedRows": {
+      "type": "int32",
+      "description": "Number of rows successfully loaded.",
+      "example": 4999800
+    },
+    "filteredRows": {
+      "type": "int32",
+      "description": "Number of rows filtered.",
+      "example": 200
+    },
+    "createTime": {
+      "type": "datetime",
+      "description": "Job creation time.",
+      "example": "2025-03-15T14:30:00Z"
+    }
+  },
+  "required": [
+    "name",
+    "dbName",
+    "tableName",
+    "kafkaBrokerList",
+    "kafkaTopic"
+  ]
+}

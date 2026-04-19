@@ -1,0 +1,15 @@
+{
+  "id": 601,
+  "name": "kafka-sales-load",
+  "dbName": "analytics",
+  "tableName": "sales_events",
+  "state": "RUNNING",
+  "dataSourceType": "KAFKA",
+  "kafkaBrokerList": "broker1:9092,broker2:9092",
+  "kafkaTopic": "sales-events",
+  "format": "JSON",
+  "totalRows": 5000000,
+  "loadedRows": 4999800,
+  "filteredRows": 200,
+  "createTime": "2025-03-15T14:30:00Z"
+}

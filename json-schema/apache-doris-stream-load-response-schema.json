@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-schema/apache-doris-stream-load-response-schema.json",
+  "title": "StreamLoadResponse",
+  "description": "Response returned by the Apache Doris Stream Load HTTP API after a data loading operation.",
+  "type": "object",
+  "properties": {
+    "TxnId": {
+      "type": "integer",
+      "description": "Transaction ID assigned to this load job.",
+      "example": 1001
+    },
+    "Label": {
+      "type": "string",
+      "description": "Label for idempotent load tracking.",
+      "example": "load-20250315-001"
+    },
+    "Status": {
+      "type": "string",
+      "description": "Overall status of the load operation.",
+      "enum": [
+        "Success",
+        "Publish Timeout",
+        "Label Already Exists",
+        "Fail"
+      ],
+      "example": "Success"
+    },
+    "ExistingJobStatus": {
+      "type": "string",
+      "description": "Status of existing job with same label if label already exists.",
+      "example": "FINISHED"
+    },
+    "Message": {
+      "type": "string",
+      "description": "Status message or error description.",
+      "example": "OK"
+    },
+    "NumberTotalRows": {
+      "type": "integer",
+      "description": "Total number of rows processed.",
+      "example": 10000
+    },
+    "NumberLoadedRows": {
+      "type": "integer",
+      "description": "Number of rows successfully loaded.",
+      "example": 9998
+    },
+    "NumberFilteredRows": {
+      "type": "integer",
+      "description": "Number of rows filtered due to quality issues.",
+      "example": 2
+    },
+    "NumberUnselectedRows": {
+      "type": "integer",
+      "description": "Number of rows filtered by WHERE clause.",
+      "example": 0
+    },
+    "LoadBytes": {
+      "type": "integer",
+      "description": "Total data size loaded in bytes.",
+      "example": 1024000
+    },
+    "LoadTimeMs": {
+      "type": "integer",
+      "description": "Time spent loading data in milliseconds.",
+      "example": 350
+    },
+    "BeginTxnTimeMs": {
+      "type": "integer",
+      "description": "Time to begin transaction in milliseconds.",
+      "example": 5
+    },
+    "StreamLoadPutTimeMs": {
+      "type": "integer",
+      "description": "Time to plan the load in milliseconds.",
+      "example": 20
+    },
+    "ReadDataTimeMs": {
+      "type": "integer",
+      "description": "Time to read data in milliseconds.",
+      "example": 120
+    },
+    "WriteDataTimeMs": {
+      "type": "integer",
+      "description": "Time to write data in milliseconds.",
+      "example": 200
+    },
+    "CommitAndPublishTimeMs": {
+      "type": "integer",
+      "description": "Time to commit and publish in milliseconds.",
+      "example": 5
+    },
+    "ErrorURL": {
+      "type": "string",
+      "description": "URL to retrieve error details when rows are filtered.",
+      "example": "http://doris-fe:8030/api/_load_error_log?file=error_log_abc"
+    }
+  }
+}

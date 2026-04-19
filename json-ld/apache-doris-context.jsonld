@@ -1,0 +1,165 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "doris": "https://doris.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "StreamLoadResponse": "doris:StreamLoadResponse",
+    "TableSchema": "doris:TableSchema",
+    "RoutineLoadJob": "doris:RoutineLoadJob",
+    "BeginTxnTimeMs": {
+      "@id": "doris:BeginTxnTimeMs",
+      "@type": "xsd:integer"
+    },
+    "CommitAndPublishTimeMs": {
+      "@id": "doris:CommitAndPublishTimeMs",
+      "@type": "xsd:integer"
+    },
+    "ErrorURL": {
+      "@id": "doris:ErrorURL",
+      "@type": "xsd:string"
+    },
+    "ExistingJobStatus": {
+      "@id": "doris:ExistingJobStatus",
+      "@type": "xsd:string"
+    },
+    "Label": {
+      "@id": "doris:Label",
+      "@type": "xsd:string"
+    },
+    "LoadBytes": {
+      "@id": "doris:LoadBytes",
+      "@type": "xsd:integer"
+    },
+    "LoadTimeMs": {
+      "@id": "doris:LoadTimeMs",
+      "@type": "xsd:integer"
+    },
+    "Message": {
+      "@id": "doris:Message",
+      "@type": "xsd:string"
+    },
+    "NumberFilteredRows": {
+      "@id": "doris:NumberFilteredRows",
+      "@type": "xsd:integer"
+    },
+    "NumberLoadedRows": {
+      "@id": "doris:NumberLoadedRows",
+      "@type": "xsd:integer"
+    },
+    "NumberTotalRows": {
+      "@id": "doris:NumberTotalRows",
+      "@type": "xsd:integer"
+    },
+    "NumberUnselectedRows": {
+      "@id": "doris:NumberUnselectedRows",
+      "@type": "xsd:integer"
+    },
+    "ReadDataTimeMs": {
+      "@id": "doris:ReadDataTimeMs",
+      "@type": "xsd:integer"
+    },
+    "Status": {
+      "@id": "doris:Status",
+      "@type": "xsd:string"
+    },
+    "StreamLoadPutTimeMs": {
+      "@id": "doris:StreamLoadPutTimeMs",
+      "@type": "xsd:integer"
+    },
+    "TxnId": {
+      "@id": "doris:TxnId",
+      "@type": "xsd:integer"
+    },
+    "WriteDataTimeMs": {
+      "@id": "doris:WriteDataTimeMs",
+      "@type": "xsd:integer"
+    },
+    "columns": {
+      "@id": "doris:columns",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "doris:comment",
+      "@type": "xsd:string"
+    },
+    "createTime": {
+      "@id": "doris:createTime",
+      "@type": "xsd:dateTime"
+    },
+    "dataSourceType": {
+      "@id": "doris:dataSourceType",
+      "@type": "xsd:string"
+    },
+    "databaseName": {
+      "@id": "doris:databaseName",
+      "@type": "xsd:string"
+    },
+    "dbName": {
+      "@id": "doris:dbName",
+      "@type": "xsd:string"
+    },
+    "filteredRows": {
+      "@id": "doris:filteredRows",
+      "@type": "xsd:integer"
+    },
+    "format": {
+      "@id": "doris:format",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "doris:id",
+      "@type": "xsd:integer"
+    },
+    "isKey": {
+      "@id": "doris:isKey",
+      "@type": "xsd:boolean"
+    },
+    "kafkaBrokerList": {
+      "@id": "doris:kafkaBrokerList",
+      "@type": "xsd:string"
+    },
+    "kafkaTopic": {
+      "@id": "doris:kafkaTopic",
+      "@type": "xsd:string"
+    },
+    "keyType": {
+      "@id": "doris:keyType",
+      "@type": "xsd:string"
+    },
+    "loadedRows": {
+      "@id": "doris:loadedRows",
+      "@type": "xsd:integer"
+    },
+    "name": "schema:name",
+    "nullable": {
+      "@id": "doris:nullable",
+      "@type": "xsd:boolean"
+    },
+    "replicationNum": {
+      "@id": "doris:replicationNum",
+      "@type": "xsd:integer"
+    },
+    "state": {
+      "@id": "doris:state",
+      "@type": "xsd:string"
+    },
+    "tableName": {
+      "@id": "doris:tableName",
+      "@type": "xsd:string"
+    },
+    "tableType": {
+      "@id": "doris:tableType",
+      "@type": "xsd:string"
+    },
+    "totalRows": {
+      "@id": "doris:totalRows",
+      "@type": "xsd:integer"
+    },
+    "type": {
+      "@id": "doris:type",
+      "@type": "xsd:string"
+    }
+  }
+}

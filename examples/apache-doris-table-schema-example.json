@@ -1,0 +1,17 @@
+{
+  "tableName": "sales_events",
+  "databaseName": "analytics",
+  "tableType": "OLAP",
+  "keyType": "DUP_KEYS",
+  "columns": [
+    {
+      "name": "event_time",
+      "type": "DATETIME",
+      "isKey": false,
+      "nullable": true,
+      "comment": "Timestamp of the event"
+    }
+  ],
+  "comment": "Sales event records table",
+  "replicationNum": 3
+}

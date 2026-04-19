@@ -1,0 +1,185 @@
+vocabulary: 1.0.0
+info:
+  provider: Apache Doris
+  description: Vocabulary for Apache Doris, the real-time MPP analytical database with MySQL compatibility.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: doris-stream-load
+    version: 3.x
+    baseUrl: http://fe-host:8030/api
+    status: active
+    description: HTTP Stream Load API for bulk data ingestion
+  - namespace: doris-fe-rest
+    version: 3.x
+    baseUrl: http://fe-host:8030
+    status: active
+    description: Frontend REST API for cluster management
+  - namespace: doris-mysql
+    version: 3.x
+    baseUrl: mysql://fe-host:9030
+    status: active
+    description: MySQL-protocol SQL interface
+  resources:
+  - name: database
+    description: Doris database namespace
+    actions:
+    - create
+    - drop
+    - list
+    - use
+    apis:
+    - doris-mysql
+    - doris-fe-rest
+  - name: table
+    description: Doris analytical table
+    actions:
+    - create
+    - drop
+    - alter
+    - describe
+    - show-schema
+    apis:
+    - doris-mysql
+    - doris-fe-rest
+  - name: stream-load
+    description: HTTP bulk data ingestion job
+    actions:
+    - load
+    - get-status
+    apis:
+    - doris-stream-load
+  - name: routine-load
+    description: Continuous Kafka data ingestion job
+    actions:
+    - create
+    - pause
+    - resume
+    - stop
+    - alter
+    - show
+    apis:
+    - doris-fe-rest
+  - name: query
+    description: SQL analytical query
+    actions:
+    - execute
+    - explain
+    - profile
+    apis:
+    - doris-mysql
+  - name: catalog
+    description: External data catalog (Hive, Iceberg)
+    actions:
+    - create
+    - drop
+    - use
+    - show-tables
+    apis:
+    - doris-mysql
+  actions:
+  - name: load
+    description: Ingest data into a Doris table
+    pattern: write
+  - name: query
+    description: Execute an analytical SQL query
+    pattern: read
+  - name: create
+    description: Create a database or table
+    pattern: write
+  - name: pause
+    description: Pause a Routine Load job
+    pattern: write
+  - name: resume
+    description: Resume a paused Routine Load job
+    pattern: write
+  - name: stop
+    description: Stop a Routine Load job
+    pattern: destructive
+  schemas:
+    ingestion:
+    - StreamLoadResponse
+    - RoutineLoadJob
+    metadata:
+    - TableSchema
+  enums:
+    keyType:
+    - DUP_KEYS
+    - AGG_KEYS
+    - UNIQUE_KEYS
+    streamLoadStatus:
+    - Success
+    - Publish Timeout
+    - Label Already Exists
+    - Fail
+    routineLoadState:
+    - NEED_SCHEDULE
+    - RUNNING
+    - PAUSED
+    - STOPPED
+    - CANCELLED
+    dataFormat:
+    - CSV
+    - JSON
+    - AVRO
+    - PARQUET
+  authentication:
+    schemes:
+    - MySQL username/password
+    - HTTP Basic Auth for Stream Load / REST API
+capability:
+  workflows: []
+  personas:
+  - id: data-engineer
+    name: Data Engineer
+    description: Builds data pipelines ingesting data into Doris via Stream Load, Flink, or Kafka connectors
+  - id: data-analyst
+    name: Data Analyst
+    description: Queries Doris with SQL for business intelligence, dashboards, and ad-hoc analysis
+  - id: platform-admin
+    name: Platform Administrator
+    description: Manages Doris cluster configuration, performance tuning, and monitoring
+  domains:
+  - name: Real-Time Analytics
+    description: Sub-second analytical queries on continuously updated data
+  - name: Data Ingestion
+    description: Bulk and streaming data loading from multiple sources
+  - name: Data Lakehouse
+    description: Federated querying over external data lakes without ETL
+  namespaces: []
+  binds: []
+crossReference:
+- resource: stream-load
+  operations:
+  - load
+  - get-status
+  workflows: []
+  personas:
+  - data-engineer
+- resource: routine-load
+  operations:
+  - create
+  - pause
+  - resume
+  - stop
+  workflows: []
+  personas:
+  - data-engineer
+  - platform-admin
+- resource: query
+  operations:
+  - execute
+  - explain
+  workflows: []
+  personas:
+  - data-analyst
+- resource: table
+  operations:
+  - create
+  - alter
+  - describe
+  workflows: []
+  personas:
+  - data-engineer
+  - platform-admin
