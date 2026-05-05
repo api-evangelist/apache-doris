@@ -1,0 +1,13 @@
+{
+  "repo": "apache-doris",
+  "feeds": [
+    {
+      "source": "https://doris.apache.org/blog/",
+      "feed_url": "https://doris.apache.org/blog/rss.xml",
+      "saved": 10,
+      "title": "Apache Doris Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:22:06Z"
+}
