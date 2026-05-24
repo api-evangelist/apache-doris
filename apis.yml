@@ -155,3 +155,5 @@ common:
     description: OpenTelemetry demo integration for observability and tracing in Doris deployments.
 - type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/vocabulary/apache-doris-vocabulary.yaml
+- type: LLMsTxt
+  url: https://doris.apache.org/llms.txt
