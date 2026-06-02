@@ -2,12 +2,20 @@
   "repo": "apache-doris",
   "feeds": [
     {
-      "source": "https://doris.apache.org/blog/",
+      "source": "https://doris.apache.org/blog/rss",
       "feed_url": "https://doris.apache.org/blog/rss",
-      "title": "Apache Doris Blog",
-      "saved": 17
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://doris.apache.org/docs/dev/install/",
+      "feed_url": "https://doris.apache.org/docs/dev/install/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 27,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 32,
+  "fetched": "2026-06-01T23:35:02Z"
 }
