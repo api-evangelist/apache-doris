@@ -53,13 +53,13 @@ apis:
   - type: Tools
     url: https://github.com/apache/doris-mcp-server
     title: MCP Server
-  - type: SDK
+  - type: SDKs
     url: https://github.com/apache/doris-flink-connector
     title: Flink Connector
-  - type: SDK
+  - type: SDKs
     url: https://github.com/apache/doris-spark-connector
     title: Spark Connector
-  - type: SDK
+  - type: SDKs
     url: https://github.com/apache/doris-kafka-connector
     title: Kafka Connector
   - type: Tools
@@ -85,11 +85,11 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-structure/apache-doris-table-schema-structure.json
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-ld/apache-doris-context.jsonld
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/examples/apache-doris-routine-load-job-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/examples/apache-doris-stream-load-response-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/examples/apache-doris-table-schema-example.json
 maintainers:
 - FN: Kin Lane
@@ -155,5 +155,5 @@ common:
     description: OpenTelemetry demo integration for observability and tracing in Doris deployments.
 - type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/vocabulary/apache-doris-vocabulary.yaml
-- type: LLMsTxt
+- type: LlmsText
   url: https://doris.apache.org/llms.txt
