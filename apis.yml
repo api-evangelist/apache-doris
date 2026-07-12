@@ -95,6 +95,10 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: VulnerabilityDisclosure
+  url: security/apache-doris-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/apache-doris-domain-security.yml
 - type: Portal
   url: https://doris.apache.org/
 - type: Documentation
