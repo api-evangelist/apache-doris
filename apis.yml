@@ -107,6 +107,19 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: IssueTracker
+  url: https://github.com/apache/doris/issues
+- type: Releases
+  url: https://github.com/apache/doris/releases
+- type: SecurityPolicy
+  url: https://github.com/apache/doris/blob/master/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/apache/doris/blob/master/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/apache/doris/blob/master/CONTRIBUTING.md
+- type: License
+  name: Apache-2.0
+  url: https://github.com/apache/doris/blob/master/LICENSE
 - type: VulnerabilityDisclosure
   url: security/apache-doris-vulnerability-disclosure.yml
 - type: DomainSecurity
