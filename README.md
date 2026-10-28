@@ -1,4 +1,4 @@
-# Apache Doris (apache-doris)
+# Apache Doris
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,130 +66,148 @@
 
 Apache Doris is a high-performance, real-time analytical database based on MPP (Massively Parallel Processing) architecture, governed by the Apache Software Foundation. It provides MySQL-protocol-compatible SQL queries, sub-second query latency on large-scale data, columnar storage with vectorized execution, real-time upsert via Stream Load and Routine Load APIs, and federated querying over data lakes (Hive, Iceberg, Hudi). It supports both shared-nothing and storage/compute-separated deployment modes.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/apis.yml)
+**Areas:** Analytics · Apache · Database · Lakehouse · MPP · OLAP · Open Source · Real-Time · SQL
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Apache Doris on APIs.io
 
-## Tags:
+Everything profiled for Apache Doris is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-doris/](https://apis.io/providers/apache-doris/)** — or go straight to one of the APIs or properties below.
 
- - Analytics, Apache, Database, Lakehouse, MPP, OLAP, Open Source, Real-Time, SQL
+### APIs (1)
 
-## Timestamps
+- [Apache Doris](https://apis.io/apis/apache-doris/apache-doris/) — Apache Doris provides a MySQL-compatible protocol for SQL queries, a REST API for cluster management and monitoring, Stream Load HTTP API for real-time bulk…
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Apache Doris
-Apache Doris provides a MySQL-compatible protocol for SQL queries, a REST API for cluster management and monitoring, Stream Load HTTP API for real-time bulk data ingestion, Routine Load for continuous Kafka ingestion, and connectors for Flink, Spark, and Kafka. An MCP server is also available for AI-assisted analytics.
+#### JSON Schema (3)
 
-**Human URL:** [https://doris.apache.org/docs/dev/summary/basic-summary](https://doris.apache.org/docs/dev/summary/basic-summary)
+The data models the API reads and writes.
 
-#### Tags:
+- [RoutineLoadJob](https://apis.io/schemas/apache-doris/apache-doris-routine-load-job/)
+- [StreamLoadResponse](https://apis.io/schemas/apache-doris/apache-doris-stream-load-response/)
+- [TableSchema](https://apis.io/schemas/apache-doris/apache-doris-table-schema/)
 
- - Analytics, Connectors, Data Ingestion, Flink, Kafka, MySQL, REST, SQL, Spark, Stream Load
+#### JSON Structure (3)
 
-#### Properties
+Data models expressed in JSON Structure.
 
-- [Documentation](https://doris.apache.org/docs/dev/summary/basic-summary)
-- [GettingStarted](https://doris.apache.org/docs/dev/install/)
-- [APIReference](https://doris.apache.org/docs/dev/admin-manual/http-actions/)
-- [GitHubRepository](https://github.com/apache/doris)
-- [MCP Server](https://github.com/apache/doris-mcp-server)
-- [Flink Connector](https://github.com/apache/doris-flink-connector)
-- [Spark Connector](https://github.com/apache/doris-spark-connector)
-- [Kafka Connector](https://github.com/apache/doris-kafka-connector)
-- [Kubernetes Operator](https://github.com/apache/doris-operator)
-- [Stream Loader CLI](https://github.com/apache/doris-streamloader)
-- [Routine Load Job](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-schema/apache-doris-routine-load-job-schema.json)
-- [Stream Load Response](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-schema/apache-doris-stream-load-response-schema.json)
-- [Table Schema](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-schema/apache-doris-table-schema-schema.json)
-- [JSONStructure](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-structure/apache-doris-routine-load-job-structure.json)
-- [JSONStructure](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-structure/apache-doris-stream-load-response-structure.json)
-- [JSONStructure](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-structure/apache-doris-table-schema-structure.json)
-- [JSONLD](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/json-ld/apache-doris-context.jsonld)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/examples/apache-doris-routine-load-job-example.json)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/examples/apache-doris-stream-load-response-example.json)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/examples/apache-doris-table-schema-example.json)
+- [Apache Doris Routine Load Job Structure](https://apis.io/json-structure/apache-doris/apache-doris-routine-load-job-structure/)
+- [Apache Doris Stream Load Response Structure](https://apis.io/json-structure/apache-doris/apache-doris-stream-load-response-structure/)
+- [Apache Doris Table Schema Structure](https://apis.io/json-structure/apache-doris/apache-doris-table-schema-structure/)
 
-## Common Properties
+#### JSON-LD (1)
 
-- [Portal](https://doris.apache.org/)
+Linked-data contexts for the provider's vocabulary.
+
+- [Apache Doris Context](https://apis.io/jsonld/apache-doris/apache-doris-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Apache Doris Vocabulary](https://apis.io/vocabularies/apache-doris/apache-doris-vocabulary/)
+
+#### Examples (3)
+
+Example requests and responses.
+
+- [Apache Doris Routine Load Job Example](https://apis.io/examples/apache-doris/apache-doris-routine-load-job-example/)
+- [Apache Doris Stream Load Response Example](https://apis.io/examples/apache-doris/apache-doris-stream-load-response-example/)
+- [Apache Doris Table Schema Example](https://apis.io/examples/apache-doris/apache-doris-table-schema-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache Doris — jsonschema rules](https://apis.io/rules/apache-doris/apache-doris-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Doris Domain Security](https://apis.io/security/apache-doris/apache-doris-domain-security/)
+- [Apache Doris Vulnerability Disclosure](https://apis.io/security/apache-doris/apache-doris-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Doris Plans Pricing](https://apis.io/plans/apache-doris/apache-doris-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Doris Rate Limits](https://apis.io/rate-limits/apache-doris/apache-doris-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Doris Finops](https://apis.io/finops/apache-doris/apache-doris-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://doris.apache.org/docs/dev/)
-- [GettingStarted](https://doris.apache.org/docs/dev/install/)
+- [Getting started](https://doris.apache.org/docs/dev/install/)
 - [Blog](https://doris.apache.org/blog/)
-- [GitHubOrganization](https://github.com/apache)
-- [GitHubRepository](https://github.com/apache/doris)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/apache-doris)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/apache-doris/refs/heads/main/vocabulary/apache-doris-vocabulary.yaml)
+- [GitHub](https://github.com/apache)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| MPP Columnar Analytics | Massively parallel processing with columnar storage and vectorized execution engine for high-concurrency sub-second analytical queries. |
-| Stream Load API | HTTP-based bulk data ingestion API that loads CSV, JSON, and Parquet data in real time with transactional guarantees. |
-| MySQL Protocol Compatibility | Fully MySQL-wire-protocol compatible, enabling use of standard MySQL clients, drivers, and BI tools without modification. |
-| Federated Data Lakehouse Queries | Query external data in Hive, Iceberg, Hudi, and Delta Lake tables without data movement using Multi-Catalog. |
-| Real-Time Upsert (Unique Key Model) | Primary key based upsert model supports real-time CDC data ingestion with micro-second latency row-level updates. |
-| Routine Load from Kafka | Continuous data ingestion from Apache Kafka topics with automatic offset management and exactly-once semantics. |
-| Tiered Storage | Hot/warm/cold data tiering with object storage (S3, HDFS) for cost-optimized storage at scale. |
-| MCP Server | Model Context Protocol (MCP) server enabling AI agents to query Doris databases through natural language. |
+**Kin Score 39.7** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 29.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 7.9 |
 
-| Name | Description |
-|------|-------------|
-| Real-Time Dashboards and Reporting | Power business intelligence dashboards with sub-second query latency on live data updated continuously. |
-| Log and Event Analytics | Ingest and analyze high-volume log, metric, and event data in real time using inverted indexes and full-text search. |
-| Customer Data Platform | Consolidate customer behavioral and transactional data from multiple sources for real-time segmentation and analytics. |
-| Data Lakehouse Analytics | Federate queries across data lake (Hive, Iceberg) and operational databases without ETL movement. |
-| Ad-Hoc Analytics | Enable data analysts to run complex exploratory SQL queries on petabyte-scale datasets with fast response times. |
+**Agent readiness 1.9** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Apache Flink | Official Flink Connector for reading from and writing to Doris in real-time Flink streaming pipelines. |
-| Apache Spark | Official Spark Connector for batch ETL and analytics workflows using Apache Spark. |
-| Apache Kafka | Kafka Connector and Routine Load for continuous real-time data ingestion from Kafka topics. |
-| Apache Iceberg / Hudi / Hive | Multi-Catalog feature enables federated queries over Iceberg, Hudi, and Hive Metastore data lakes. |
-| Kubernetes | Official Kubernetes Operator for automated Doris cluster lifecycle management. |
-| OpenTelemetry | OpenTelemetry demo integration for observability and tracing in Doris deployments. |
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-doris/](https://apis.io/providers/apache-doris/).
 
-Machine-readable schemas for Apache Doris data ingestion and table management models.
+## How this profile is made
 
-### JSON Schema
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Routine Load Job](json-schema/apache-doris-routine-load-job-schema.json)
-- [Stream Load Response](json-schema/apache-doris-stream-load-response-schema.json)
-- [Table Schema](json-schema/apache-doris-table-schema-schema.json)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Doris: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Structure
+## Open an issue
 
-- [Routine Load Job](json-structure/apache-doris-routine-load-job-structure.json)
-- [Stream Load Response](json-structure/apache-doris-stream-load-response-structure.json)
-- [Table Schema](json-structure/apache-doris-table-schema-structure.json)
-
-### JSON-LD
-
-- [Apache Doris](json-ld/apache-doris-context.jsonld)
-
-### Examples
-
-- [Routine Load Job](examples/apache-doris-routine-load-job-example.json)
-- [Stream Load Response](examples/apache-doris-stream-load-response-example.json)
-- [Table Schema](examples/apache-doris-table-schema-example.json)
-
-## Vocabulary
-
-- [Apache Doris Vocabulary](vocabulary/apache-doris-vocabulary.yaml) — Taxonomy mapping 6 resources, 6 actions, and 3 personas across Apache Doris real-time analytics
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-doris/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
